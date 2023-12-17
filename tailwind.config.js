@@ -3,9 +3,10 @@ export default {
   theme: {
     extend: {},
     colors: {
-      mainBackground: "#F5F5F5",
+      mainBackground: "#2C2C2C",
       primaryColor: "#AFC8AD",
-      textColor: "#404040",
+      textColorLight: "#F5F5F5",
+      textColorDark: "#404040",
       // lightThemeColors: {
       //   mainBackground: "#F5F5F5",
       //   primaryColor: "#AFC8AD",
@@ -19,6 +20,9 @@ export default {
     },
     fontFamily: {
       sans: ["Poppins"],
+    },
+    width: {
+      custom: "60rem",
     },
   },
   plugins: [],

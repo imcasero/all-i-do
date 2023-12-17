@@ -1,10 +1,11 @@
+import HeaderComponent from "./components/header/header.component";
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <>
-      <h1 className="text-3xl text-primaryColor">
-        Hello world!
-      </h1>
-    </>
-  )
-}
+      <HeaderComponent />
+    </ >
+  );
+};
+
+export default App;
