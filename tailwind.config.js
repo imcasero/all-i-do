@@ -1,7 +1,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        custom: "60rem",
+      },
+    },
     colors: {
       mainBackground: "#2C2C2C",
       primaryColor: "#AFC8AD",
@@ -20,9 +24,6 @@ export default {
     },
     fontFamily: {
       sans: ["Poppins"],
-    },
-    width: {
-      custom: "60rem",
     },
   },
   plugins: [],
