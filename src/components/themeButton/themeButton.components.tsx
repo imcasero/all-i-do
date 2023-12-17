@@ -1,4 +1,4 @@
-import { Moon } from "../SVG/moon.component";
+import { Moon } from "../../assets/svg/moon.component";
 
 const ThemeButtonComponent: React.FC = () => {
     return (
