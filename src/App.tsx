@@ -62,7 +62,7 @@ const App: React.FC<AppProps> = () => {
     <>
       <HeaderComponent />
       <InputComponent onAddTask={addTask} />
-      <TasksComponent>
+      <TasksComponent data={tasks} >
         {tasks.map((data: TaskData) => {
           return <TaskComponent data={data} key={data.id} markAsDone={toggleTaskCompletedById} deleteTask={deleteTaskById} />;
         })}
