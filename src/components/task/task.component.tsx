@@ -1,7 +1,8 @@
 import React from 'react';
 import { TaskData } from '../../types';
-import { Check } from '../../assets/svg/check.component';
-import { Trash } from '../../assets/svg/trash.component';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 interface TaskComponentProps {
     data: TaskData;
@@ -11,23 +12,22 @@ interface TaskComponentProps {
 
 export const TaskComponent: React.FC<TaskComponentProps> = ({ data, markAsDone, deleteTask }) => {
     return (
-        <div className={`border p-4 my-4 flex items-center justify-between ${data.isCompleted ? 'bg-primaryColor' : 'bg-white'} rounded-lg`}>
+        <div className={` p-4 my-4 flex items-center justify-between ${!data.isCompleted ? 'bg-primaryColor text-textColorDark border-none' : 'bg-green-800 opacity-50'} rounded`}>
             <div>
-                <div className={`text-lg font-semibold ${data.isCompleted ? 'line-through text-gray-300' : ''}`}>{data.title}</div>
+                <div className={`text-lg  ${data.isCompleted ? 'line-through' : ''}`}>{data.title}</div>
                 <div className="text-sm">{data.isCompleted ? 'Completed' : 'Pending'}</div>
             </div>
-            <div>
+            <div className='flex gap-4'>
                 <button
-                    className={`bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg mr-2 ${data.isCompleted ? 'hidden' : ''}`}
                     onClick={() => markAsDone(data.id)}
                 >
-                    <Check />
+                    {data.isCompleted ? <RadioButtonUncheckedIcon /> : <CheckCircleOutlineIcon />}
                 </button>
                 <button
-                    className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg"
+                    className=" px-4 py-2 rounded-lg"
                     onClick={() => deleteTask(data.id)}
                 >
-                    <Trash />
+                    <DeleteOutlineIcon />
                 </button>
             </div>
         </div>
