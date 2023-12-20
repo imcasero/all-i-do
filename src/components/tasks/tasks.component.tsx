@@ -6,7 +6,7 @@ interface TaskComponentProps {
 }
 
 export const TasksComponent: React.FC<TaskComponentProps> = ({ children, data }) => {
-    const tasksLenght = data.length + 1;
+    const tasksLenght = data.length;
     const completedTaskLength = data.filter((task) => task.isCompleted).length;
 
     return (
