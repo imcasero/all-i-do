@@ -22,7 +22,7 @@ export const TaskComponent: React.FC<TaskComponentProps> = ({ data, markAsDone, 
                 </button>
                 <div>
                     <div className={`text-lg  ${data.isCompleted ? 'line-through ' : 'text-primaryColor'}`}>{data.title}</div>
-                    <div className={`text-xs ${!data.isCompleted ? ' ' : 'text-primaryColor'}`}>{data.isCompleted ? 'Completed' : 'Pending'}</div>
+                    <div className={`text-xs ${!data.isCompleted ? ' ' : 'text-primaryColor'}`}>{data.isCompleted ? 'Done' : 'To do'}</div>
                 </div>
 
             </div>
